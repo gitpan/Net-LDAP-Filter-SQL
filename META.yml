@@ -14,8 +14,11 @@ meta-spec:
 name: Net-LDAP-Filter-SQL
 requires:
   Net::LDAP::Filter: 0
+  Test::Deep: 0
+  Test::Most: 0
+  parent: 0
 resources:
   homepage: http://github.com/blaze-x/net-ldap-filter-sql/tree
   repository: git://github.com/blaze-x/net-ldap-filter-sql.git
-version: 0.01
+version: 0.02
 x_authority: cpan:ESSELENS

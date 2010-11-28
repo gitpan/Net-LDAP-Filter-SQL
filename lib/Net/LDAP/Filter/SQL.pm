@@ -5,10 +5,11 @@ package Net::LDAP::Filter::SQL;
 BEGIN {
   $Net::LDAP::Filter::SQL::AUTHORITY = 'cpan:ESSELENS';
 }
+BEGIN {
+  $Net::LDAP::Filter::SQL::VERSION = '0.02';
+}
 use parent qw/Net::LDAP::Filter/;
 use Carp;
-
-our $VERSION = '0.01';
 
 sub _filter_parse {
     my $self = shift;
@@ -88,21 +89,25 @@ sub new_from_data {
 
 =pod
 
-=head1 NAME
-
-Net::LDAP::Filter::SQL
-
 =head1 VERSION
 
-version 0.01
+version 0.02
+
+=head1 NAME
+
+Net::LDAP::Filter::SQL - LDAP filter to SQL clause transformer
 
 =head1 SYNOPSIS
 
-    my $ldapfilter = new Net::LDAP::Filter('(&(name=Homer)(city=Springfield))');
+    my $ldapfilter = new Net::LDAP::Filter( '(&(name=Homer)(city=Springfield))' );
 
-    my $sqlfilter  = new Net::LDAP::Filter::SQL('(&(name=Marge)(city=Springfield))');
+
+    my $sqlfilter  = new Net::LDAP::Filter::SQL( '(&(name=Marge)(city=Springfield))' );
+
     my $sqlfilter2 = Net::LDAP::Filter::SQL->new_from_data({ 'equalityMatch' => { 'assertionValue' => 'bar', 'attributeDesc' => 'foo' } });
+
     my $sqlfilter3 = bless($ldapfilter,'Net::LDAP::Filter::SQL');
+
 
     print Data::Dumper({ clause => $sqlfilter->sql_clause, values => $sqlfilter->sql_values });
 
@@ -113,10 +118,6 @@ version 0.01
 This module allows you to transform a Net::LDAP::Filter object into an SQL
 clause string containing '?' placeholders.  The corresponding values can be
 accessed as a list, and thus can be used inside a dbh prepare or select call.
-
-=head1 NAME
-
-Net::LDAP::Filter::SQL - LDAP filter to SQL clause transformer
 
 =head1 METHODS
 
@@ -136,6 +137,8 @@ returns an sql where clause in string format with '?' placeholders
 
 returns a list of values associated with the filter
 
+=head1 METHODS
+
 =head1 EXAMPLE
 
     my $filter = new Net::LDAP::Filter::SQL('(&(name=Marge)(city=Springfield))');
@@ -150,17 +153,15 @@ returns a list of values associated with the filter
     #                       ]
     #         };
 
-=head1 AUTHOR
-
-Tim Esselens C<< <tim.esselens@gmail.com> >>
-
 =head1 BUGS
 
 probably lots, please send patches
 
 =head1 TODO
 
-=over
+=over 4
+
+=item *
 
 figure out what approxMatch should do. e.g. soundex? 
 
@@ -172,19 +173,32 @@ send me an e-mail
 
 =head1 SEE ALSO
 
+=over 4
+
+=item *
+
 L<Net::LDAP::Filter>
+
+=item *
+
 L<Net::LDAP::Server>
+
+=back
 
 =head1 ACKNOWLEDGEMENTS
 
 My mother, for raising me and my brother the way she did. Thanks mom!
 
-=head1 COPYRIGHT & LICENSE
+=head1 INSTALLATION
 
-Copyright 2010 datif - Tim Esselens
+See perlmodinstall for information and options on installing Perl modules.
 
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+=head1 BUGS AND LIMITATIONS
+
+No bugs have been reported.
+
+Please report any bugs or feature requests through the web interface at
+L<http://rt.cpan.org>.
 
 =head1 AUTHOR
 

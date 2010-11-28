@@ -20,9 +20,12 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'Net::LDAP::Filter::SQL',
   'PREREQ_PM' => {
-    'Net::LDAP::Filter' => '0'
+    'Net::LDAP::Filter' => '0',
+    'Test::Deep' => '0',
+    'Test::Most' => '0',
+    'parent' => '0'
   },
-  'VERSION' => '0.01',
+  'VERSION' => '0.02',
   'test' => {
     'TESTS' => 't/*.t'
   }

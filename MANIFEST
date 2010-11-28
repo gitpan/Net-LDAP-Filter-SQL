@@ -14,3 +14,4 @@ t/99_examples.t
 t/author-critic.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
+weaver.ini
