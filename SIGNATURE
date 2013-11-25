@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.63.
+signed via the Module::Signature module, version 0.73.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,15 +14,16 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
+SHA1 9127fa72ec2ac42b1cc197cf91e9688ac66a8f58 Changes
 SHA1 43d869ded6bcaceb9a6d061cf2659c0f64de0d8f INSTALL
-SHA1 f1acdf8b77d77f37ebf12aaf685c139514cc0e33 LICENSE
-SHA1 c5eff92425b854b7d8968c42421bb7d91b0d1f11 MANIFEST
-SHA1 204f6b504b9d743ead929eb7906c44bf664772a3 META.yml
-SHA1 961660bdf60717f14169e6418fa06c589404a022 Makefile.PL
-SHA1 aaba83c3ef67d140d674c97ad62744bd1a3d90cb README
+SHA1 2bf02466a89a417feb18dafb9e65841674ab23fd LICENSE
+SHA1 58dcb0a16011871aa7732f30f633119913fab79d MANIFEST
+SHA1 a3e6544a6997cd41e7905de3a508201f7b01d907 META.yml
+SHA1 bfc8e7a28310e2d3cd4f7425bc73aec919482086 Makefile.PL
+SHA1 a635dac0bd7464a1a61b41011b43c48765dadc63 README
 SHA1 95b96bae050f8bd6b0374ef30467d389e10da49e README.asciidoc
-SHA1 4a2baa18dc1a1a7d6365e0b5fa68ff410621d41a dist.ini
-SHA1 10a4baac1be94807b9612bc9656a1fce6987f881 lib/Net/LDAP/Filter/SQL.pm
+SHA1 59416296ca6f32705a6cf5c3a4d39ae50917bf22 dist.ini
+SHA1 1053b3fd46f9a8f0b2520fd8c85ac990ad3091e4 lib/Net/LDAP/Filter/SQL.pm
 SHA1 e5b43d98b1ff08e93fd7cadc13516c46be87df8c t/00_use.t
 SHA1 b758fe3993bef2374ea3c3ec8ef9a3eba4c289e7 t/10_functional.t
 SHA1 00e6330d599836308c1fd4ec916a195433750800 t/99_examples.t
@@ -31,9 +32,9 @@ SHA1 9433c240fe590bc404ab68ff63984df763e347ed t/release-pod-coverage.t
 SHA1 b30cbdfaf935017c4568c0c91b242438cb87786e t/release-pod-syntax.t
 SHA1 294d7102d0d0805e29e376315caf4a46f468fc43 weaver.ini
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.11 (GNU/Linux)
+Version: GnuPG v1.4.15 (Darwin)
 
-iF4EAREIAAYFAkzy1RMACgkQRYEBOuBGfukJAQD/cWKpeDVu+sJ8yOyBGEVorX5H
-O32pB6CRUJa4J1jK0jUA/jf1Koq+IboMpWaARbdR3oMZd6s3mpDYTuVK1aRa+EG3
-=iWwv
+iF4EAREIAAYFAlKTNTEACgkQRYEBOuBGfukUdAD+LJ/Oxe729gI29QZDUl3j71oo
+icHfPEeZrJoGpbLpcA0A/3cBSjuJF3zpiqjrvz5KaRbJub9iOT/Gyv2h4A3oNEKU
+=3prT
 -----END PGP SIGNATURE-----

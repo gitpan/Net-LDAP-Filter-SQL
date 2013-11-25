@@ -4,9 +4,9 @@ author:
   - 'Tim Esselens <tim.esselens@gmail.com>'
 build_requires: {}
 configure_requires:
-  ExtUtils::MakeMaker: 6.31
+  ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.102344, CPAN::Meta::Converter version 2.102400'
+generated_by: 'Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -18,7 +18,7 @@ requires:
   Test::Most: 0
   parent: 0
 resources:
-  homepage: http://github.com/blaze-x/net-ldap-filter-sql/tree
-  repository: git://github.com/blaze-x/net-ldap-filter-sql.git
-version: 0.02
+  homepage: https://github.com/timesselens/net-ldap-filter-sql
+  repository: https://github.com/timesselens/net-ldap-filter-sql.git
+version: 0.03
 x_authority: cpan:ESSELENS

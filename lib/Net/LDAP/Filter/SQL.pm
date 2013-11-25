@@ -5,8 +5,8 @@ package Net::LDAP::Filter::SQL;
 BEGIN {
   $Net::LDAP::Filter::SQL::AUTHORITY = 'cpan:ESSELENS';
 }
-BEGIN {
-  $Net::LDAP::Filter::SQL::VERSION = '0.02';
+{
+  $Net::LDAP::Filter::SQL::VERSION = '0.03';
 }
 use parent qw/Net::LDAP::Filter/;
 use Carp;
@@ -85,13 +85,13 @@ sub new_from_data {
 
 42;
 
-
+__END__
 
 =pod
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 NAME
 
@@ -161,11 +161,23 @@ probably lots, please send patches
 
 =over 4
 
-=item *
 
-figure out what approxMatch should do. e.g. soundex? 
 
 =back
+
+Figure out what to do with C<approxMatch>. From RFC 4511 (L<< 
+http://www.faqs.org/rfcs/rfc4511.html >>):
+
+   4.5.1.7.6.  SearchRequest.filter.approxMatch
+   An approxMatch filter is TRUE when there is a value of the attribute
+   type or subtype for which some locally-defined approximate matching
+   algorithm (e.g., spelling variations, phonetic match, etc.) returns
+   TRUE.  If a value matches for equality, it also satisfies an
+   approximate match.  If approximate matching is not supported for the
+   attribute, this filter item should be treated as an equalityMatch.
+
+That's it: whatever you want it to be. Regex, soundex, etc..
+or simply make it like an C<equalityMatch>.
 
 =head1 SUPPORT
 
@@ -195,10 +207,8 @@ See perlmodinstall for information and options on installing Perl modules.
 
 =head1 BUGS AND LIMITATIONS
 
-No bugs have been reported.
-
-Please report any bugs or feature requests through the web interface at
-L<http://rt.cpan.org>.
+You can make new bug reports, and view existing ones, through the
+web interface at L<http://rt.cpan.org>.
 
 =head1 AUTHOR
 
@@ -206,13 +216,9 @@ Tim Esselens <tim.esselens@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Tim Esselens.
+This software is copyright (c) 2013 by Tim Esselens.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-
